@@ -1,6 +1,6 @@
-module Swaggerui
+module SwaggerUiEngine2
   module ConfigParser
-    Swaggerui::DEFAULTS.each do |default|
+    SwaggerUiEngine2::DEFAULTS.each do |default|
       next if default.first.to_s.eql?('validator_url')
 
       define_method("set_#{default.first}") do
@@ -12,7 +12,7 @@ module Swaggerui
     end
 
     def set_validator_url
-      validator_enabled? ? Swaggerui::DEFAULTS[:validator_url] : 'null'
+      validator_enabled? ? SwaggerUiEngine2::DEFAULTS[:validator_url] : 'null'
     end
 
     def validator_enabled?
@@ -20,7 +20,7 @@ module Swaggerui
     end
 
     def configuration
-      Swaggerui.configuration
+      SwaggerUiEngine2.configuration
     end
   end
 end

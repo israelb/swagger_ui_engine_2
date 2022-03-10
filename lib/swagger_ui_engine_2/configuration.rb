@@ -1,4 +1,4 @@
-module Swaggerui
+module SwaggerUiEngine2
   class Configuration
     # Configurable options
     OPTIONS = %i(

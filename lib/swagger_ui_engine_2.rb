@@ -1,9 +1,10 @@
-require "swaggerui/version"
-require "swaggerui/engine"
-require "swaggerui/configuration"
-require "swaggerui/defaults"
+require "sprockets/railtie"
+require "swagger_ui_engine_2/version"
+require "swagger_ui_engine_2/engine"
+require "swagger_ui_engine_2/configuration"
+require "swagger_ui_engine_2/defaults"
 
-module Swaggerui
+module SwaggerUiEngine2
   class << self
     delegate(*Configuration::OPTIONS, to: :configuration)
 

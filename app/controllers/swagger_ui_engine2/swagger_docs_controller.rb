@@ -1,6 +1,8 @@
-module Swaggerui
+module SwaggerUiEngine2
   class SwaggerDocsController < ApplicationController
-    include Swaggerui::ConfigParser
+    include SwaggerUiEngine2::ConfigParser
+
+    layout 'layouts/swagger_ui_engine2/swagger'
 
     before_action :set_configs
 
@@ -11,7 +13,7 @@ module Swaggerui
     private
 
     def set_configs
-      Swaggerui::DEFAULTS.keys.each do |key|
+      SwaggerUiEngine2::DEFAULTS.keys.each do |key|
         instance_variable_set("@#{key}", self.send("set_#{key}"))
       end
     end

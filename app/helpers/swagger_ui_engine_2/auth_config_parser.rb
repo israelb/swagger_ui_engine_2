@@ -1,4 +1,4 @@
-module Swaggerui
+module SwaggerUiEngine2
   module AuthConfigParser
     def admin_username
       configuration.admin_username
@@ -13,7 +13,7 @@ module Swaggerui
     end
 
     def configuration
-      Swaggerui.configuration
+      SwaggerUiEngine2.configuration
     end
   end
 end

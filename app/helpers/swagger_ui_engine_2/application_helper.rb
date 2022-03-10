@@ -1,4 +1,4 @@
-module Swaggerui
+module SwaggerUiEngine2
   module ApplicationHelper
   end
 end

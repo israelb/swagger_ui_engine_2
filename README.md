@@ -1,4 +1,4 @@
-# Swaggerui
+# SwaggerUiEngine2
 Short description and motivation.
 
 ## Usage

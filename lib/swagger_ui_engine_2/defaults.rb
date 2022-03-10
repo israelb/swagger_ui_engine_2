@@ -1,4 +1,4 @@
-module Swaggerui
+module SwaggerUiEngine2
   DEFAULTS = {
     swagger_url:      'http://petstore.swagger.io/v2/swagger.json',
     doc_expansion:    'none',

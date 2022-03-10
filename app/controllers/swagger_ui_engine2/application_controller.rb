@@ -1,8 +1,9 @@
-module Swaggerui
+module SwaggerUiEngine2
   class ApplicationController < ActionController::Base
-    include Swaggerui::AuthConfigParser
+    include SwaggerUiEngine2::AuthConfigParser
 
     protect_from_forgery with: :exception
+    layout false
 
     before_action :authenticate_admin
 
