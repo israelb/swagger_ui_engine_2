@@ -1,0 +1,36 @@
+<% content_for(:head) do %>
+  <script type="text/javascript">
+    window.onload = function() {
+      var url = window.location.search.match(/url=([^&]+)/);
+      if (url && url.length > 1) {
+        url = decodeURIComponent(url[1]);
+      } else {
+        url = "<%= @swagger_url %>";
+      }
+
+      // Begin Swagger UI call region
+      const ui = SwaggerUIBundle({
+        url: url,
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        docExpansion: "<%= @doc_expansion %>",
+        jsonEditor: "<%= @json_editor %>",
+        defaultModelRendering: "<%= @model_rendering %>",
+        showRequestHeaders: "<%= @request_headers %>",
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: "StandaloneLayout"
+      });
+      // End Swagger UI call region
+
+      window.ui = ui;
+    };
+  </script>
+<% end %>
+
+<div id="swagger-ui"></div>
