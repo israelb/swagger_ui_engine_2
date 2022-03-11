@@ -11,12 +11,11 @@
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
         url: url,
+        validatorUrl: "<%= @validator_url %>",
         dom_id: '#swagger-ui',
         deepLinking: true,
         docExpansion: "<%= @doc_expansion %>",
-        jsonEditor: "<%= @json_editor %>",
         defaultModelRendering: "<%= @model_rendering %>",
-        showRequestHeaders: "<%= @request_headers %>",
         presets: [
           SwaggerUIBundle.presets.apis,
           SwaggerUIStandalonePreset
@@ -24,7 +23,7 @@
         plugins: [
           SwaggerUIBundle.plugins.DownloadUrl
         ],
-        layout: "StandaloneLayout"
+        layout: "<%= @layout %>"
       });
       // End Swagger UI call region
 
