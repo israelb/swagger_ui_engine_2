@@ -5,8 +5,7 @@ module SwaggerUiEngine2
 
       define_method("set_#{default.first}") do
         # set_swagger_url set_doc_expansion
-        # set_json_editor set_model_rendering
-        # set_request_headers
+        # set_model_rendering ...
         configuration.send("#{default.first}") || default.last
       end
     end
