@@ -2,6 +2,8 @@
 
 Include [swagger-ui](https://github.com/swagger-api/swagger-ui) as Rails engine and document your API with simple YAML files.
 
+This gem is a fork of 'swagger_ui_engine'. Because it is no longer maintainable anymore.
+
 ## Versions
 
 Swagger UI version | Rails version
